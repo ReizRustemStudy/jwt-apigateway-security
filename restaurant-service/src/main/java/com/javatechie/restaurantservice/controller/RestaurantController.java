@@ -23,7 +23,7 @@ public class RestaurantController {
 		return service.greeting();
 	}
 	
-	@GetMapping
+	@GetMapping("/orders/status/{orderId}")
 	public OrderResponseDTO getOrder(@PathVariable String orderId) {
 		return service.getOrder(orderId);
 	}
