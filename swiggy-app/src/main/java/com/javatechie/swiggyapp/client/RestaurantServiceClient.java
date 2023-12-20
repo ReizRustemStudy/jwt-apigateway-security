@@ -11,7 +11,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class RestaurantServiceClient {
 	
-	private RestTemplate template;
+	private final RestTemplate template;
 	
 	public OrderResponseDTO fetchOrderStatus(String orderId) {
 		return template.getForObject("http://RESTAURANT-SERVICE/restaurant/order/status/" + orderId, OrderResponseDTO.class);
